@@ -24,29 +24,23 @@ $font-sm: 20px;
     }
 }
 
-@mixin headingStyles($fontSize: 50px) {
-    font-size: $fontSize;
-    color: $color-secondary;
+.heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-secondary;
     text-align: center;
 }
 
-@mixin transition($param...) {
-    transition: $param;
-}
+h1 {
+    @extend .heading;
 
-.banner h1 {
-    @include headingStyles($font_lg);
- 
-}
-
-footer h3 {
-    @include headingStyles;
-    @include transition(color .5s, background-color 1s);
-    
     &:hover {
-        color: $color-tertiary;
-        background-color: $color-primary;
+        background-color: green;
     }
+}
+
+.footer h3 {
+    @extend h1;
 }
 
 
