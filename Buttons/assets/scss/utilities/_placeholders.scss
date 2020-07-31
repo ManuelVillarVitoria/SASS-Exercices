@@ -1,0 +1,16 @@
+%btn {
+	margin: 1rem; 
+	padding: .938em 1.875em;
+	border: .094em solid;
+	border-radius: .625em;
+	box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15);
+	color: #FFF;
+	font: bold 1em sans-serif;
+	text: {
+		transform: uppercase;
+		decoration: none;
+		shadow: 0 .063em rgba(black,.3);
+	}
+	transition: .3s;
+  	cursor:pointer;
+}

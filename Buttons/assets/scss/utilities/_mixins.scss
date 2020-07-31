@@ -1,0 +1,37 @@
+@mixin btn-theme($btn-color) {
+	border-color: darken($btn-color, 20%);
+	background-color: $btn-color;
+	&:hover {
+		background-color: darken($btn-color, 6%);
+		box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%);
+	}
+	&:active {
+		box-shadow: 0 .063em $off-wht, inset 0 0 1.094em darken($btn-color, 30%), inset 0 .063em darken($btn-color, 20%),inset 0 -0.188em darken($btn-color, 20%); 
+	}
+	@extend %btn;
+}
+
+
+@mixin breakpoint($class) {
+	@if $class == xs {
+	  @media (max-width: 767px) { @content; }
+	}
+   
+	@else if $class == sm {
+	  @media (min-width: 768px) { @content; }
+	}
+   
+	@else if $class == md {
+	  @media (min-width: 992px) { @content; }
+	}
+   
+	@else if $class == lg {
+	  @media (min-width: 1200px) { @content; }
+	}
+   
+	@else {
+	  @warn "Breakpoint mixin supports: xs, sm, md, lg";
+	}
+  }
+
+  

@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+  }
+
+ body {
+	background-color: #E9E9E9;
+	margin-top: 3.5rem;
+ }
+
+.container {
+	margin: 0.5rem 0.5rem;
+	font-size: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
